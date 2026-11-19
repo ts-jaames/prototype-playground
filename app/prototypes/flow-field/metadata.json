@@ -1,0 +1,9 @@
+{
+  "title": "Flow Field",
+  "description": "Particles drifting through a noise-driven vector field, with tunable speed, turbulence, trails and color.",
+  "tags": ["simulation", "canvas"],
+  "createdAt": "2026-11-19",
+  "updatedAt": "2026-11-19T19:45:00.000Z",
+  "hidden": false,
+  "public": false
+}
