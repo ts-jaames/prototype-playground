@@ -1,0 +1,9 @@
+{
+  "title": "Changeset Review",
+  "description": "An agent proposes edits across calendar, email and tasks. Review each change like a diff: swipe or tap to accept or reject, then apply.",
+  "tags": ["agent-ux", "mcp", "mobile"],
+  "createdAt": "2026-11-19",
+  "updatedAt": "2026-11-20T02:10:00.000Z",
+  "hidden": false,
+  "public": false
+}
