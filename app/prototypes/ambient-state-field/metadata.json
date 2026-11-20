@@ -1,0 +1,9 @@
+{
+  "title": "Ambient State Field",
+  "description": "A calm particle field that shows what an agent is doing through motion alone: drifting while it searches, tightening as it converges, scattering when it's unsure, settling when done.",
+  "tags": ["agent-ux", "motion", "canvas"],
+  "createdAt": "2026-11-19",
+  "updatedAt": "2026-11-20T05:10:00.000Z",
+  "hidden": false,
+  "public": false
+}
