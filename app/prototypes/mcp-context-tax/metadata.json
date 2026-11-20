@@ -1,0 +1,9 @@
+{
+  "title": "MCP Context Tax",
+  "description": "See what each MCP server's tool definitions cost in context tokens, and which tools never get called. Prune the dead weight and watch the budget bar give tokens back.",
+  "tags": ["agent-ux", "mcp", "monitoring"],
+  "createdAt": "2026-11-20",
+  "updatedAt": "2026-11-20T14:50:00.000Z",
+  "hidden": false,
+  "public": false
+}
