@@ -1,0 +1,9 @@
+{
+  "title": "Steering Dials",
+  "description": "Instead of rewording a prompt, steer an agent's results with dials for scope, recency, relevance and depth. Each dial rewrites the MCP tool call live.",
+  "tags": ["agent-ux", "mcp", "content"],
+  "createdAt": "2026-11-19",
+  "updatedAt": "2026-11-20T03:10:00.000Z",
+  "hidden": false,
+  "public": false
+}
