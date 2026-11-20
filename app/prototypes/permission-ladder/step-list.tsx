@@ -22,7 +22,7 @@ export function StepList({ index, started, waiting, results }: Props) {
             key={step.id}
             className={cn(
               "flex min-h-11 items-center justify-between gap-3 py-2",
-              !result && !current && "text-muted-foreground opacity-60",
+              started && !result && !current && "text-muted-foreground opacity-60",
             )}
           >
             <span className="flex min-w-0 flex-col">
