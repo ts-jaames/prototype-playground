@@ -56,8 +56,8 @@ export function FieldCanvas({ state, settings, playing }: Props) {
         ctx.beginPath();
         for (const d of dots) {
           if (d.group !== group) continue;
-          ctx.moveTo(d.x + 1.8, d.y);
-          ctx.arc(d.x, d.y, 1.8, 0, Math.PI * 2);
+          ctx.moveTo(d.x + 2.2, d.y);
+          ctx.arc(d.x, d.y, 2.2, 0, Math.PI * 2);
         }
         ctx.fill();
       }
@@ -83,7 +83,8 @@ export function FieldCanvas({ state, settings, playing }: Props) {
     };
 
     const loop = () => {
-      if (live.current.playing) draw();
+      if (bounds.width === 0) restart();
+      else if (live.current.playing) draw();
       else if (live.current.dirty) restart();
       live.current.dirty = false;
       frame = requestAnimationFrame(loop);

@@ -19,11 +19,11 @@ export const STATES: { id: AgentState; label: string; caption: string }[] = [
 ];
 
 export const STATE_PARAMS: Record<AgentState, Params> = {
-  idle: { flow: 0.5, pull: 0, swirl: 0, ringR: 0.3, jitter: 0.02, split: 0, spread: 0, alpha: 0.35, damp: 0.95 },
-  searching: { flow: 1.6, pull: 0, swirl: 0, ringR: 0.3, jitter: 0.05, split: 0, spread: 0.6, alpha: 0.6, damp: 0.96 },
+  idle: { flow: 0.5, pull: 0, swirl: 0, ringR: 0.3, jitter: 0.02, split: 0, spread: 0, alpha: 0.55, damp: 0.95 },
+  searching: { flow: 1.6, pull: 0, swirl: 0, ringR: 0.3, jitter: 0.05, split: 0, spread: 0.6, alpha: 0.75, damp: 0.96 },
   converging: { flow: 0.5, pull: 1, swirl: 0.6, ringR: 0.16, jitter: 0.03, split: 0, spread: 0, alpha: 0.85, damp: 0.93 },
   uncertain: { flow: 0.8, pull: 0.7, swirl: 0.2, ringR: 0.1, jitter: 1, split: 1, spread: 0, alpha: 0.75, damp: 0.92 },
-  done: { flow: 0.12, pull: 1, swirl: 0.12, ringR: 0.26, jitter: 0, split: 0, spread: 0, alpha: 1, damp: 0.9 },
+  done: { flow: 0.12, pull: 1, swirl: 0.3, ringR: 0.26, jitter: 0, split: 0, spread: 0, alpha: 1, damp: 0.9 },
 };
 
 /** A scripted agent run for the demo button. */
@@ -37,3 +37,6 @@ export const DEMO: { state: AgentState; ms: number; note: string }[] = [
 
 export const BLEND = 0.035;
 export const WARMUP_STEPS = 300;
+export const NOISE_SCALE = 0.004;
+export const CURL_EPS = 2;
+export const CURL_GAIN = 40;

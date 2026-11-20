@@ -1,5 +1,5 @@
 // Particle physics for the field. No React.
-import { WARMUP_STEPS } from "./data";
+import { CURL_EPS, CURL_GAIN, NOISE_SCALE, WARMUP_STEPS } from "./data";
 import type { Dot, Noise2D, Params } from "./types";
 
 export type Bounds = { width: number; height: number };
@@ -32,9 +32,13 @@ export function stepDot(d: Dot, p: Params, w: World): void {
   const cx = width / 2 + offset;
   const cy = height / 2;
 
-  const angle = w.noise(d.x * 0.004, d.y * 0.004 + w.time * 0.004) * Math.PI * 2;
-  let ax = Math.cos(angle) * p.flow * 0.12;
-  let ay = Math.sin(angle) * p.flow * 0.12;
+  // Curl of the noise field: it flows along contours instead of pooling in sinks, so dots stay spread out.
+  const sx = NOISE_SCALE;
+  const t = w.time * 0.004;
+  const dNdy = w.noise(d.x * sx, (d.y + CURL_EPS) * sx + t) - w.noise(d.x * sx, (d.y - CURL_EPS) * sx + t);
+  const dNdx = w.noise((d.x + CURL_EPS) * sx, d.y * sx + t) - w.noise((d.x - CURL_EPS) * sx, d.y * sx + t);
+  let ax = dNdy * CURL_GAIN * p.flow * 0.12;
+  let ay = -dNdx * CURL_GAIN * p.flow * 0.12;
 
   const dx = d.x - cx;
   const dy = d.y - cy;
@@ -45,8 +49,10 @@ export function stepDot(d: Dot, p: Params, w: World): void {
   const ring = p.ringR * minSide * (1 + 0.04 * Math.sin(w.time * 0.02));
   ax += nx * (ring - dist) * 0.004 * p.pull - ny * p.swirl * 0.06 * p.pull;
   ay += ny * (ring - dist) * 0.004 * p.pull + nx * p.swirl * 0.06 * p.pull;
-  ax += nx * p.spread * 0.02;
-  ay += ny * p.spread * 0.02;
+  // Searching breathes outward and back, so dots sweep the canvas instead of piling on its edges.
+  const sweep = Math.sin(w.time * 0.03) * p.spread * 0.03;
+  ax += nx * sweep;
+  ay += ny * sweep;
   ax += (w.random() - 0.5) * p.jitter * 0.6;
   ay += (w.random() - 0.5) * p.jitter * 0.6;
 
@@ -55,14 +61,9 @@ export function stepDot(d: Dot, p: Params, w: World): void {
   d.x += d.vx;
   d.y += d.vy;
 
-  if (d.x < 0 || d.x > width) {
-    d.x = Math.min(width, Math.max(0, d.x));
-    d.vx *= -0.5;
-  }
-  if (d.y < 0 || d.y > height) {
-    d.y = Math.min(height, Math.max(0, d.y));
-    d.vy *= -0.5;
-  }
+  // Wrap around the edges: no walls to pile up against.
+  d.x = (d.x + width) % width;
+  d.y = (d.y + height) % height;
 }
 
 /** Run the physics forward without drawing, so a fresh or paused field already looks settled. */
