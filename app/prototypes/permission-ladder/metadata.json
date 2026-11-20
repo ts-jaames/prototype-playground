@@ -1,0 +1,9 @@
+{
+  "title": "Permission Ladder",
+  "description": "An agent asks for tool access only when it needs it. Pick how much trust to give, from once to always, and watch the audit trail.",
+  "tags": ["agent-ux", "mcp", "trust"],
+  "createdAt": "2026-11-19",
+  "updatedAt": "2026-11-20T04:40:00.000Z",
+  "hidden": false,
+  "public": false
+}
