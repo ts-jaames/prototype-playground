@@ -1,0 +1,9 @@
+{
+  "title": "MCP Call Ledger",
+  "description": "A live feed of an agent's MCP tool calls, grouped by server and tool and tagged by blast radius. Set allow, ask or block right on the row you're watching.",
+  "tags": ["agent-ux", "mcp", "monitoring"],
+  "createdAt": "2026-11-20",
+  "updatedAt": "2026-11-20T14:30:00.000Z",
+  "hidden": false,
+  "public": false
+}
