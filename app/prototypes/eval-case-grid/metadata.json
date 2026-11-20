@@ -1,0 +1,9 @@
+{
+  "title": "Eval Case Grid",
+  "description": "Every eval case is a row, every run a column. A vertical stripe means a change broke things; a horizontal stripe means a flaky case. Tap or drag the grid to inspect any cell.",
+  "tags": ["agent-ux", "evals", "monitoring"],
+  "createdAt": "2026-11-20",
+  "updatedAt": "2026-11-20T15:30:00.000Z",
+  "hidden": false,
+  "public": false
+}
