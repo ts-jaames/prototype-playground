@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { PrototypeInfoProvider } from "@/components/playground/prototype-info";
 import { loadPrototypePage } from "@/lib/load-prototype";
 import { getPrototype, getPublicPrototypes } from "@/lib/prototypes";
 import { siteUrl } from "@/lib/site-url";
@@ -42,12 +43,16 @@ export async function generateMetadata({ params }: PageProps<"/p/[slug]">): Prom
 
 export default async function PublicPrototypePage({ params }: PageProps<"/p/[slug]">) {
   const { slug } = await params;
-  if (!getPublic(slug)) notFound();
+  const prototype = getPublic(slug);
+  if (!prototype) notFound();
 
   const Prototype = await loadPrototypePage(slug);
+  const info = { [slug]: { title: prototype.title, description: prototype.description } };
   return (
-    <div className="flex flex-1 flex-col">
-      <Prototype />
-    </div>
+    <PrototypeInfoProvider prototypes={info}>
+      <div className="flex flex-1 flex-col">
+        <Prototype />
+      </div>
+    </PrototypeInfoProvider>
   );
 }

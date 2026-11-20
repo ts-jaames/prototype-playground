@@ -1,5 +1,6 @@
 "use client";
 
+import { ControlsLayout } from "@/components/playground/controls";
 import { useEffect, useRef, useState } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -48,7 +49,7 @@ export function ProvenanceChips() {
   const conflicts = conflictCount(states);
 
   return (
-    <main className="mx-auto flex w-full max-w-2xl flex-col gap-4 px-4 py-6">
+    <ControlsLayout>
       <header className="flex flex-col gap-1">
         <h1 className="text-lg font-medium">{ACCOUNT} renewal brief</h1>
         <p className="text-sm text-muted-foreground">
@@ -94,6 +95,6 @@ export function ProvenanceChips() {
       <Button variant="outline" className="self-start" onClick={() => setStates(initialStates())}>
         Reset
       </Button>
-    </main>
+    </ControlsLayout>
   );
 }

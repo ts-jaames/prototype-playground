@@ -187,7 +187,8 @@ return (
 ```
 
 - You get persistence (try/catch, loaded on mount, namespaced), Reset, and **Randomize** for free. Every panel must have both Reset and Randomize; `ControlPanel` always renders them.
-- `ControlsLayout` places the panel in a sidebar on desktop (`lg:`) so it never covers the subject, and in a bottom sheet behind a floating button on mobile.
+- `ControlsLayout` places the panel in a sidebar on desktop (`lg:`) so it never covers the subject, and in a bottom sheet behind a floating button on mobile. The sidebar also shows the prototype's `description` from `metadata.json` automatically, so keep descriptions to one or two plain sentences.
+- Every prototype wraps its content in `ControlsLayout`, even without controls (`<ControlsLayout>…</ControlsLayout>`, no `panel`), so the description sidebar is consistent. Don't add your own outer `max-w-2xl` column; `ControlsLayout` provides it.
 - Need a control type that doesn't exist? Add it to `components/playground/controls/` (schema + field + randomize + sanitize) rather than hand-rolling a one-off panel.
 
 ### Mobile first
@@ -282,6 +283,7 @@ WebGL/canvas libraries that touch `window` at import time: load them from a `"us
 - **`asChild` triggers drop `data-slot="button"`.** `DropdownMenuTrigger asChild` + `Button` renders `data-slot="dropdown-menu-trigger"`. Style or query buttons by `data-variant`/`data-size`, not only `data-slot`.
 - **OG video URLs must be absolute.** `metadataBase` absolutizes `og:image` but not `og:video`. `/p/[slug]` builds absolute URLs with `siteUrl()`.
 - **Playwright "Executable doesn't exist".** The browser build doesn't match the installed `playwright`. Run `npx playwright install chromium`.
+- **Prototypes merged without thumbnails.** `npm run validate` only *warns* about missing thumbnails, so 7 PRs passed CI and landed showing "No preview yet". Treat that warning as blocking: run `npm run thumbnails -- --slug <slug>` before opening the PR.
 - **Canvas trails leave a faint residue** when fading with a low-alpha fill (8-bit rounding never reaches the background). Fine for effects; if a perfectly clean background matters, clear fully and redraw instead.
 
 <!-- BEGIN:nextjs-agent-rules -->

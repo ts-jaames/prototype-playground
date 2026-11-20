@@ -1,5 +1,6 @@
 "use client";
 
+import { ControlsLayout } from "@/components/playground/controls";
 import { useEffect, useState } from "react";
 
 import { Collapse } from "@/components/playground/collapse";
@@ -66,7 +67,7 @@ export function PermissionLadder() {
   }
 
   return (
-    <main className="mx-auto flex w-full max-w-2xl flex-col gap-4 px-4 py-6">
+    <ControlsLayout>
       <header className="flex flex-col gap-1">
         <h1 className="text-lg font-medium">{TASK}</h1>
         <p className="text-sm text-muted-foreground">
@@ -87,6 +88,6 @@ export function PermissionLadder() {
       )}
 
       <AuditList grants={grants} log={log} onRevoke={revoke} />
-    </main>
+    </ControlsLayout>
   );
 }

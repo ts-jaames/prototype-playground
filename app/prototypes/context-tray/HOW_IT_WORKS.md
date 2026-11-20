@@ -25,7 +25,7 @@ Shared `Button`, `Badge`, `Collapse`.
 
 ## Component Tree
 ```
-ContextTray
+ContextTray (inside ControlsLayout; desktop sidebar shows the description)
 ├── SourceChip × 5 (sticky tray)
 └── Answer
     ├── verdict card

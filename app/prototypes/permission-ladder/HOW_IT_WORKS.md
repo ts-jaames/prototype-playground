@@ -29,7 +29,7 @@ Shared `Button`, `Badge`, `Collapse`.
 
 ## Component Tree
 ```
-PermissionLadder
+PermissionLadder (inside ControlsLayout; desktop sidebar shows the description)
 ├── StepList
 ├── PermissionRequest (in Collapse)
 ├── Run button

@@ -1,5 +1,6 @@
 "use client";
 
+import { ControlsLayout } from "@/components/playground/controls";
 import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 
@@ -63,7 +64,7 @@ export function ChangesetReview() {
   }
 
   return (
-    <main className="mx-auto flex w-full max-w-2xl flex-col gap-4 px-4 py-6">
+    <ControlsLayout>
       <header className="flex flex-col gap-1">
         <p className="text-sm text-muted-foreground">You asked</p>
         <h1 className="text-lg font-medium">{REQUEST}</h1>
@@ -95,6 +96,6 @@ export function ChangesetReview() {
         onApply={apply}
         onReset={reset}
       />
-    </main>
+    </ControlsLayout>
   );
 }

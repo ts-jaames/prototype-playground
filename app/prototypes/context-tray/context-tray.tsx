@@ -1,5 +1,6 @@
 "use client";
 
+import { ControlsLayout } from "@/components/playground/controls";
 import { useState } from "react";
 
 import { Answer } from "./answer";
@@ -21,7 +22,7 @@ export function ContextTray() {
   }
 
   return (
-    <main className="mx-auto flex w-full max-w-2xl flex-col gap-4 px-4 py-6">
+    <ControlsLayout>
       <header className="flex flex-col gap-1">
         <h1 className="text-lg font-medium">{QUESTION}</h1>
         <p className="text-sm text-muted-foreground">
@@ -36,6 +37,6 @@ export function ContextTray() {
       </div>
 
       <Answer active={active} verdict={verdictFor(active)} />
-    </main>
+    </ControlsLayout>
   );
 }

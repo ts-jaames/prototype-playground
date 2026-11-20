@@ -2,14 +2,14 @@
 
 import { ArrowLeftIcon } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
+import { usePrototypeInfo } from "@/components/playground/prototype-info";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 
 /** Slim bar above every private prototype. Hidden in thumbnail captures. */
-export function PrototypeHeader({ titles }: { titles: Record<string, string> }) {
-  const slug = usePathname().split("/")[2] ?? "";
+export function PrototypeHeader() {
+  const info = usePrototypeInfo();
 
   return (
     <header
@@ -21,7 +21,7 @@ export function PrototypeHeader({ titles }: { titles: Record<string, string> }) 
           <ArrowLeftIcon />
         </Link>
       </Button>
-      <span className="flex-1 truncate text-sm font-medium">{titles[slug] ?? ""}</span>
+      <span className="flex-1 truncate text-sm font-medium">{info?.title ?? ""}</span>
       <ThemeToggle />
     </header>
   );
