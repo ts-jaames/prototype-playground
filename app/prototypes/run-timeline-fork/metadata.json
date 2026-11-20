@@ -1,0 +1,9 @@
+{
+  "title": "Run Timeline + Fork",
+  "description": "Scrub an agent's MCP tool calls step by step, change one input at step N, and fork a new run that reuses everything before it.",
+  "tags": ["agent-ux", "mcp", "threads"],
+  "createdAt": "2026-11-19",
+  "updatedAt": "2026-11-20T02:30:00.000Z",
+  "hidden": false,
+  "public": false
+}
