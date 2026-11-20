@@ -1,0 +1,9 @@
+{
+  "title": "Eval Flip Diff",
+  "description": "Compare an eval run to its baseline by what flipped, not by scores. Regressions and fixes surface; noise and unchanged cases collapse into counts. A noise-floor slider decides what counts as a flip.",
+  "tags": ["agent-ux", "evals", "monitoring"],
+  "createdAt": "2026-11-20",
+  "updatedAt": "2026-11-20T15:10:00.000Z",
+  "hidden": false,
+  "public": false
+}
