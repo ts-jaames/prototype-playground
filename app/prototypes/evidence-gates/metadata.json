@@ -1,0 +1,9 @@
+{
+  "title": "Evidence Gates",
+  "description": "Harness progress as a few gates instead of a percentage. The run pauses at each gate, shows the evidence against its criteria, and asks you to go, redirect or stop.",
+  "tags": ["agent-ux", "harness", "monitoring"],
+  "createdAt": "2026-11-20",
+  "updatedAt": "2026-11-20T16:10:00.000Z",
+  "hidden": false,
+  "public": false
+}
