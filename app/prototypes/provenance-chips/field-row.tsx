@@ -42,7 +42,7 @@ export function FieldRow({ def, state, refreshing, onSelect, onRequery }: Props)
             </Badge>
           </button>
         </PopoverTrigger>
-        <PopoverContent align="end" className="w-[min(22rem,calc(100vw-2rem))]">
+        <PopoverContent align="end" collisionPadding={16} className="w-[min(22rem,calc(100vw-2rem))]">
           <SourcePopover state={state} refreshing={refreshing} onSelect={onSelect} onRequery={onRequery} />
         </PopoverContent>
       </Popover>
