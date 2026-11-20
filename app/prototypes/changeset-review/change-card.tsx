@@ -72,7 +72,7 @@ export function ChangeCard({ change, status, locked, onDecide, onUndo }: Props) 
         onPointerCancel={endDrag}
         style={{ transform: `translateX(${dx}px)` }}
         className={cn(
-          "relative flex touch-pan-y flex-col gap-2 bg-card p-4",
+          "relative flex touch-pan-y flex-col gap-2 bg-card p-4 select-none",
           canSwipe && "cursor-grab",
           !dragging && "transition-transform duration-200 ease-(--ease-smooth)",
         )}
