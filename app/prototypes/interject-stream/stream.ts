@@ -29,3 +29,6 @@ export function delayAfter(word: string | undefined): number {
   if (/[,;:]$/.test(word)) return 190;
   return 55;
 }
+
+/** Start with two clauses already on screen so the first view isn't empty; the rest streams in. */
+export const INITIAL_REVEALED = BASE.slice(0, 2).flatMap(words).length;

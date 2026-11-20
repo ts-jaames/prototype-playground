@@ -10,13 +10,13 @@ import { Button } from "@/components/ui/button";
 import { Clause } from "./clause";
 import { BASE, DIRECTIVES, QUESTION } from "./data";
 import { RedirectBar } from "./redirect-bar";
-import { buildSequence, clauseStarts, delayAfter, words } from "./stream";
+import { buildSequence, clauseStarts, delayAfter, INITIAL_REVEALED, words } from "./stream";
 import type { Cut, Directive } from "./types";
 
 export function InterjectStream() {
   const reducedMotion = usePrefersReducedMotion();
   const [cut, setCut] = useState<Cut | null>(null);
-  const [revealed, setRevealed] = useState(0);
+  const [revealed, setRevealed] = useState(INITIAL_REVEALED);
   const [picked, setPicked] = useState<number | null>(null);
   const [showTail, setShowTail] = useState(false);
 
