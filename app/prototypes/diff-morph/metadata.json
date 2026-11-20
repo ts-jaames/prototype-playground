@@ -1,0 +1,9 @@
+{
+  "title": "Diff Morph",
+  "description": "When an agent revises its answer, unchanged words glide to their new places, removed words fade out and new words fade in, so you see what changed without rereading.",
+  "tags": ["agent-ux", "motion", "content"],
+  "createdAt": "2026-11-19",
+  "updatedAt": "2026-11-20T05:40:00.000Z",
+  "hidden": false,
+  "public": false
+}
