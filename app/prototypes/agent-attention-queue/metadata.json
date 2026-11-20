@@ -1,0 +1,9 @@
+{
+  "title": "Agent Attention Queue",
+  "description": "Monitor a fleet of agents by exception: only what needs a human surfaces as a one-line ask with approve, redirect or stop. Everything else stays quiet.",
+  "tags": ["agent-ux", "monitoring", "mobile"],
+  "createdAt": "2026-11-20",
+  "updatedAt": "2026-11-20T14:10:00.000Z",
+  "hidden": false,
+  "public": false
+}
