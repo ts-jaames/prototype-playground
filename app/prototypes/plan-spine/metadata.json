@@ -1,0 +1,9 @@
+{
+  "title": "Plan Spine",
+  "description": "A harness run's plan as a vertical spine that bends as actual work drifts from plan. Projected steps are dashed, the ETA updates live, and Replan straightens the spine.",
+  "tags": ["agent-ux", "harness", "monitoring"],
+  "createdAt": "2026-11-20",
+  "updatedAt": "2026-11-20T15:50:00.000Z",
+  "hidden": false,
+  "public": false
+}
