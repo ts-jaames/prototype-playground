@@ -27,7 +27,7 @@ change-card.tsx   apply-bar.tsx
 
 ## Component Tree
 ```
-ChangesetReview
+ChangesetReview (inside ControlsLayout; desktop sidebar shows the description)
 ├── header
 ├── ChangeCard × 6
 └── ApplyBar

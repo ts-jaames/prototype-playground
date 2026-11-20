@@ -28,7 +28,7 @@ Shared `Button`, `Badge`, `Collapse`; `tw-animate-css` for fade-ins.
 
 ## Component Tree
 ```
-InterjectStream
+InterjectStream (inside ControlsLayout; desktop sidebar shows the description)
 ├── Clause × n
 ├── discarded continuation (Collapse)
 └── RedirectBar

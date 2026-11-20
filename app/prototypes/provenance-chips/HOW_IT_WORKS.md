@@ -26,7 +26,7 @@ shared `Popover`, `Badge`, `Button`, `Separator`, `lucide-react`.
 
 ## Component Tree
 ```
-ProvenanceChips
+ProvenanceChips (inside ControlsLayout; desktop sidebar shows the description)
 ├── FieldRow × 5
 │   └── Popover → SourcePopover
 └── summary section

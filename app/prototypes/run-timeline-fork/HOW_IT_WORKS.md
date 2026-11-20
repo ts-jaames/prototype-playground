@@ -22,7 +22,7 @@ runs[] ──► run-timeline-fork.tsx ──► StepRow / StepDetail / AnswerCa
 
 ## Component Tree
 ```
-RunTimelineFork
+RunTimelineFork (inside ControlsLayout; desktop sidebar shows the description)
 ├── ToggleGroup (runs)
 ├── Slider + Replay
 ├── StepRow × 5

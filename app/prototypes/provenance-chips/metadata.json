@@ -3,7 +3,7 @@
   "description": "Every value an agent reports carries its MCP source and freshness. Tap the chip to compare sources, swap one in, or re-query, and the summary rewrites itself.",
   "tags": ["agent-ux", "mcp", "chat"],
   "createdAt": "2026-11-19",
-  "updatedAt": "2026-11-20T02:50:00.000Z",
+  "updatedAt": "2026-11-20T14:35:28.371Z",
   "hidden": false,
   "public": false
 }
