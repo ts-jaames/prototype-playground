@@ -1,0 +1,9 @@
+{
+  "title": "Context Tray",
+  "description": "See exactly which sources an agent is using. Toggle a source off and its claims fold away, and the verdict can change.",
+  "tags": ["agent-ux", "mcp", "chat"],
+  "createdAt": "2026-11-19",
+  "updatedAt": "2026-11-20T03:40:00.000Z",
+  "hidden": false,
+  "public": false
+}
